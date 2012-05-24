@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2011 the original author or authors.
+ * Copyright 2009-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-import griffon.jgoodies.*
+import griffon.plugins.jgoodies.*
 
 /**
  * @author Andres Almiray
  */
 class JgoodiesFormsGriffonAddon {
-    def factories = [
-        form: new FormFactory(),
+    Map factories = [
+        form:       new FormFactory(),
         formLayout: new FormLayoutFactory(),
-        cc: new CellConstraintsFactory()
+        cc:         new CellConstraintsFactory()
     ]
 }
