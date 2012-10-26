@@ -17,7 +17,7 @@
 /**
  * @author Andres Almiray
  */
-class MiglayoutGriffonPlugin {
+class JgoodiesFormsGriffonPlugin {
     // the plugin version
     String version = '1.0.1'
     // the version or versions of Griffon the plugin is designed for
