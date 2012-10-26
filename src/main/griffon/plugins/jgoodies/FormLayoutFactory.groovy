@@ -57,7 +57,7 @@ class FormLayoutFactory extends LayoutFactory {
             case ColumnSpec[]:
             case String: 
                 break
-            case GSring: 
+            case GString: 
                 columns = columns.toString()
                 break
             case List:
@@ -70,7 +70,7 @@ class FormLayoutFactory extends LayoutFactory {
             case RowSpec[]:
             case String: 
                 break
-            case GSring: 
+            case GString: 
                 rows = rows.toString()
                 break
             case List:

@@ -19,7 +19,7 @@
  */
 class MiglayoutGriffonPlugin {
     // the plugin version
-    String version = '1.0.0'
+    String version = '1.0.1'
     // the version or versions of Griffon the plugin is designed for
     String griffonVersion = '1.0.0 > *'
     // the other plugins this plugin depends on
@@ -109,6 +109,27 @@ Nodes and properties accept different types according to the following rules
 Additionally, you may call any method of `DefaultFormBuilder` inside **form**'s child closure. Here is an example
 
 ### Example
+
+Using the `formLayout` node
+    application(title:'JGoodies - Forms',
+        pack: true,
+        locationByPlatform:true,
+        iconImage: imageIcon('/griffon-icon-48x48.png').image,
+        iconImages: [imageIcon('/griffon-icon-48x48.png').image,
+        imageIcon('/griffon-icon-32x32.png').image,
+        imageIcon('/griffon-icon-16x16.png').image]) {
+        formLayout(columns: "pref, 4dlu, 50dlu, 4dlu, min",
+                      rows: "pref, 2dlu, pref, 2dlu, pref")
+        label('Label1:', constraints: cc(x: 1, y: 1))
+        textField(       constraints: cc(x: 3, y: 1, w: 3))
+        label('Label2:', constraints: cc(x: 1, y: 3))
+        textField(       constraints: cc(x: 3, y: 3))
+        label('Label3:', constraints: cc(x: 1, y: 5))
+        textField(       constraints: cc(x: 3, y: 5))
+        button('...',    constraints: cc(x: 5, y: 5))
+    }
+
+Using the `form` node
 
         application(title:'JGoodies - Forms',
             pack: true,
